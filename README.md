@@ -99,6 +99,33 @@ The word **"original"** does not appear in AGPLv3 in any authorship context. The
 
 ---
 
+### Argument 1b: "The 'conveying' clause covers using LLMs"
+
+This is the most sophisticated version of the argument. The claim goes:
+
+> *Using an LLM = "conveying" your code to a third party (OpenAI/Anthropic) who "makes modifications for you" without complying with AGPLv3 terms → therefore it violates AGPLv3.*
+
+It sounds plausible. It isn't. Here's why:
+
+**"Convey" is defined in AGPLv3 §0:**
+> *"To 'convey' a work means any kind of propagation that enables other parties to make or receive copies."*
+
+This means **distributing the software** — giving someone a copy of the program to run or redistribute. Pasting a code snippet into a chat prompt does not distribute the Peacock codebase. You are not enabling OpenAI to "receive copies" of the covered work in any legally meaningful sense under this definition.
+
+**The clause is about the *covered work*, not snippets.** The "covered work" is the complete AGPLv3 program. Typing a function into ChatGPT is not conveying the covered work.
+
+**The obligation in that clause falls on the *receiving party*, not the contributor.** Even if the clause were somehow triggered, it restricts what the LLM company may do — not what a contributor may submit. The contributor who submits a PR hasn't "conveyed" anything. They used a tool and wrote code.
+
+**The contributor doesn't own Peacock's copyright.** To trigger this clause, you'd need to be conveying *your own* copyrighted work under AGPLv3. A new contributor's PR contains *their* new code — they don't hold copyright over the existing Peacock codebase and therefore cannot "convey" it.
+
+**This clause was written for the outsourced-contractor/SaaS scenario** — e.g. *"I hire a company to run and modify my AGPLv3 software on my behalf."* It ensures those contractors can't walk away with copies of your software. It has nothing to do with what text editor, autocomplete tool, or AI assistant a developer uses while writing code.
+
+**The hippo analogy revisited:** The person making this argument used the hippo analogy — *"no law needs to explicitly ban feeding someone to a hippo for it to be murder."* But that analogy only works when the act maps onto an existing prohibition. Here, they've now found a clause they claim maps onto it. The problem is the mapping is wrong — "conveying" ≠ "prompting an LLM," by the license's own §0 definition. The analogy would only hold if typing into ChatGPT actually constituted distributing the covered work. It doesn't.
+
+**Verdict: ❌ False — the "conveying" clause does not apply to using LLMs as development tools**
+
+---
+
 ### Argument 2: "It doesn't need to literally mention it" (the hippo analogy)
 
 **Claim:** Just like no country needs to explicitly ban feeding someone to a hippo for it to be murder, AGPLv3 doesn't need to explicitly mention AI for it to be prohibited.
